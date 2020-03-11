@@ -58,6 +58,20 @@ destPic.addEventListener('click', ()=>{
     destPic.src="https://images-na.ssl-images-amazon.com/images/I/718vecXok%2BL.jpg"
 })
 
+// THIS CHANGES THE BACKGROUND BACK TO WHITE 9
+document.addEventListener('keydown', event => {
+    if (event.key === "b"){
+        document.body.style.backgroundColor = "blue";
+    }
+})
+
+// THIS CHANGES THE BACKGROUND BACK TO WHITE 10
+document.addEventListener('keydown', event => {
+    if (event.key === "t"){
+        document.body.style.backgroundColor = "tan";
+    }
+})
+
 
 // -------------
 // NEST
