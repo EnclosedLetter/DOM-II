@@ -1,16 +1,9 @@
 // Your code goes here
 // console.log("something else still");
 
-
-// //addEventListener works on elements, document and widndow
-// document.querySelector('nav').addEventListener('click',()=>{
-//     console.log('the nav got clicked');
-// })
-
-
 //BUS TEXT
 const busText = document.querySelector(".nav-container").addEventListener("mouseover", function(){
-    document.querySelector(".logo-heading").textContent = "WELCOME TO THE FUN BUS!";
+    document.querySelector(".logo-heading").textContent = "HOP ON THE FUN BUS!";
 })
 
 // BUS PIC 
@@ -19,10 +12,15 @@ const busPic = document.querySelector(".intro").addEventListener("dblclick", fun
 })
 
 // LET'S GO Text
-const letsgoText = document.querySelector(".text-content").addEventListener("dblclick", function(){
-    document.querySelector(".text-content h2").style.color = "purple";
+// const letsgoText = document.querySelector(".text-content").addEventListener("keydown", function(){
+document.addEventListener("keydown", event => {
+    if (event.key === "q"){
+        document.body.style.color = "purple"; 
+        }
+    if(event.key === "p"){
+        document.body.style = " ";
+         }
 })
-
 // YOU CAN PUT MULTIPLE TAGS IN QUERY SELECTOR
 
 // ADVENTURE pic
@@ -30,6 +28,7 @@ const adventurePic = document.querySelector(".img-content").addEventListener("db
     document.querySelector("#advPic").style.width = "50%";
 })
 
+// CHANGE BOAT SCALE
 const boatPic = document.querySelector(".content-section .img-fluid-rounded");
 boatPic.addEventListener('mouseenter', ()=>{
     boatPic.style.transform = "scale(1.2)";
@@ -40,14 +39,22 @@ boatPic.addEventListener("mouseleave", () => {
     boatPic.style.transform = "scale(1)";
 });
 
-// const adventPic = document.querySelector(".img-content");
-// // console.log(catImage);
 
-// adventPic.addEventListener("mouseenter", () => {
-//     adventPic.style.transform = "scale(1.2)";
-//     adventPic.style.transition = "all 0.3s";
-//    })
+// CHANGE BACKGROUND BY PRESSING ANY KEY
+const backgroundClr = document.querySelector("*");
+backgroundClr.addEventListener('keypress', event =>{
+    backgroundClr.style.backgroundColor = "orange";
+})
 
-//    adventPic.addEventListener("mouseleave", () => {
-//     adventPic.style.transform = "scale(1)";
-//    })
+// const otherVar = document.querySelector("*"); THIS CHANGES THE BACKGROUND BACK TO WHITE
+document.addEventListener('keydown', event => {
+    if (event.key === "w"){
+        document.body.style.backgroundColor = "white";
+    }
+})
+
+
+// -------------
+
+
+
