@@ -22,7 +22,7 @@ document.addEventListener("keydown", event => {
 })
 // YOU CAN PUT MULTIPLE TAGS IN QUERY SELECTOR
 
-// ADVENTURE pic 4
+// ADVENTURE pic 4 THIS METHOD YOU HAVE TO CALL THE PARENT THEN THE CHILD IN THE @2nd  querySELECTOR
 const adventurePic = document.querySelector(".img-content").addEventListener("dblclick", function(){
     document.querySelector("#advPic").style.width = "50%";
 })
@@ -81,9 +81,27 @@ document.querySelector("#link1").addEventListener('click', function(x){
     x.stopPropagation();
 })
 
-document.querySelector(".nav").addEventListener('click', function(){
-    document.querySelector(".nav").style.backgroundColor = "pink";
+// document.querySelector(".nav").addEventListener('click', function(){
+//     document.querySelector(".nav").style.backgroundColor = "red";
+// })
+// I WASN'T ABLE TO CHANGE THE FONT BECAUSE I WAS TARGETING THE NAV, NOT THE LINKS.
+const pinkNav = document.querySelector(".nav");
+pinkNav.addEventListener('dblclick', event =>{
+    pinkNav.style.backgroundColor = "blue";
 })
+
+
+// THIS IS ONLY SELECTING THE FIRST LINK BECAUSE QUERYSELECTOR ONLY CHOOSES THE FIRST ONE
+const pinkNavLetters = document.querySelector(".nav .nav-link");
+pinkNavLetters.addEventListener("click", event =>{
+    pinkNavLetters.style.color = "pink";
+})
+
+// REFERENCE
+// const backgroundClr = document.querySelector("*");
+// backgroundClr.addEventListener('keypress', event =>{
+//     backgroundClr.style.backgroundColor = "orange";
+// })
 
 // PREVENT DEFAULT
 
